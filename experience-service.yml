@@ -2,7 +2,7 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://localhost:3306/experiencedb
+    url: jdbc:mysql://localhost:3306/profiledb
   jpa:
     hibernate:
       ddl-auto: update
@@ -14,7 +14,7 @@ spring:
     serialization:
       fail-on-empty-beans: false
   application:
-    name: experience-service
+    name: profile-service
 server:
   port: 0
   error:
@@ -31,4 +31,7 @@ management:
       exposure:
         include: refresh,health
 api:
-  profile: http://PROFILE-SERVICE/api/profile
+  user: http://USER-SERVICE/api/user
+  experience: http://EXPERIENCE-SERVICE/api/experience
+  education: http://EDUCATION-SERVICE/api/education
+  auth: http://AUTH-SERVICE/api/user
